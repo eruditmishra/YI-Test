@@ -17,9 +17,11 @@ const SelectedCard = ({ card }) => {
       />
       {/* Right Part details */}
       <div>
+        {/* Name */}
         <h2 className="text-[#E16259] font-bold text-[4rem] underline">
           {name}
         </h2>
+        {/* Address */}
         <p className="text-[1.25rem] leading-[145%]">
           <span className="text-[#A259FF] font-bold">
             {card.location.street.number}
@@ -29,7 +31,9 @@ const SelectedCard = ({ card }) => {
           , <span className="font-bold">{card.location.country}</span>,{" "}
           {card.location.postcode}
         </p>
+        {/* Time Zone */}
         <p className="text-[1.25rem] leading-[145%]">{timeZone}</p>
+        {/* Gender */}
         <p className="text-[1.25rem] leading-[145%] capitalize text-[#8A8A8A]">
           {card.gender}
         </p>
