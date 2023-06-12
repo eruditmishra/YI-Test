@@ -15,7 +15,9 @@ const Card = (props) => {
   //   const { setSelectedCard } = CardData();
 
   const handleCardSelect = (cardData) => {
+    console.log("inside");
     props.setSelectedCard(cardData);
+    console.log(cardData);
   };
 
   return (
@@ -55,7 +57,6 @@ const Card = (props) => {
           <p>{firstName}</p>
           <p>{lastName}</p>
         </div>
-        {/* Email */}
         <p
           className={`${
             selectedCard === card ? "text-white" : "text-[#E16259]"

@@ -7,14 +7,15 @@ const CardData = () => {
   const [selectedCard, setSelectedCard] = useState(null);
 
   const fetchData = async () => {
-    // Fetch User details
     try {
       const response = await fetch(url);
       const result = await response.json();
       const fetchedData = result.results;
       setData(fetchedData);
-      //   Make the first card selected by default
       setSelectedCard(fetchedData[0]);
+
+      console.log(fetchedData);
+      console.log(fetchedData[0]);
     } catch (error) {
       console.log("Data cannot be fetched");
       console.log(error);
